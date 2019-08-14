@@ -44,5 +44,16 @@
       "jsx",
       "json"
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bbenoist/fontawesome-user-agent.git"
+  },
+  "keywords": ["font", "awesome", "fontawesome", "user", "agent", "user-agent", "bowser", "icon"],
+  "author": "_bbenoist_",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bbenoist/fontawesome-user-agent/issues"
+  },
+  "homepage": "https://github.com/bbenoist/fontawesome-user-agent"
 }

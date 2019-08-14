@@ -1,0 +1,27 @@
+language: node_js
+
+before_script:
+  - npm install
+
+script:
+  - npm run build
+  - npm run test
+
+after_success:
+  - npm pack
+
+deploy:
+  - provider: releases
+    api_key: $GITHUB_TOKEN
+    file_glob: true
+    file: "fontawesome-user-agent-*.tgz"
+    skip_cleanup: true
+    on:
+      tags: true
+
+  - provider: npm
+    skip_cleanup: true
+    email: $NPM_EMAIL
+    api_key: $NPM_TOKEN
+    on:
+      tags: true

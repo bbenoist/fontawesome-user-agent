@@ -73,10 +73,14 @@ See [Font Awesome Basic Use](https://fontawesome.com/how-to-use/on-the-web/refer
 
 ## Supported Icons
 
-See [`doc/default-options.md`](doc/default-options.md) for a list of the supported browsers, platforms and OS icons.
+See [`doc/default-options.md`](https://github.com/bbenoist/fontawesome-user-agent/blob/master/doc/default-options.md) for a list of the supported browsers, platforms and OS icons.
 
 ## Develop
 
 * build: `npm run build`
 * test: `npm run test`
 * code coverage: `npm run coverage`
+
+## License
+
+[MIT](https://github.com/bbenoist/fontawesome-user-agent/blob/master/LICENSE)
