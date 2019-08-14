@@ -1,6 +1,6 @@
 # fontawesome-user-agent
 
-[![Build Status](https://travis-ci.org/bbenoist/fontawesome-user-agent.svg?branch=master)](https://travis-ci.org/bbenoist/fontawesome-user-agent)
+[![Build Status](https://travis-ci.org/bbenoist/fontawesome-user-agent.svg?branch=master)](https://travis-ci.org/bbenoist/fontawesome-user-agent) [![Greenkeeper badge](https://badges.greenkeeper.io/bbenoist/fontawesome-user-agent.svg)](https://greenkeeper.io/)
 
 A simple, yet extensible, TypeScript (and JavaScript) library which tries to determine browser, os and platform [Font Awesome](https://fontawesome.com/) icons from user-agent string (thanks to [Bowser](https://github.com/lancedikson/bowser)).
 
