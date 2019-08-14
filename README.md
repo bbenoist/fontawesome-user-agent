@@ -1,5 +1,6 @@
 # fontawesome-user-agent
 
+[![NPM Version](https://img.shields.io/npm/v/fontawesome-user-agent.svg?style=flat)](https://npmjs.org/package/fontawesome-user-agent)
 [![Build Status](https://travis-ci.org/bbenoist/fontawesome-user-agent.svg?branch=master)](https://travis-ci.org/bbenoist/fontawesome-user-agent)
 [![Greenkeeper badge](https://badges.greenkeeper.io/bbenoist/fontawesome-user-agent.svg)](https://greenkeeper.io/)
 [![Coverage Status](https://coveralls.io/repos/github/bbenoist/fontawesome-user-agent/badge.svg?branch=master)](https://coveralls.io/github/bbenoist/fontawesome-user-agent?branch=master)
