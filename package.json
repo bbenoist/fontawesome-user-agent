@@ -18,14 +18,14 @@
     "bowser": "^2.5.3"
   },
   "devDependencies": {
-    "@types/jest": "^21.1.5",
+    "@types/jest": "^24.0.17",
     "@types/node": "^12.7.1",
-    "browserify": "^14.5.0",
-    "jest": "^21.2.1",
-    "ts-jest": "^21.1.4",
+    "browserify": "^16.5.0",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
     "ts-node": "^8.3.0",
-    "typescript": "^2.5.3",
-    "uglifyify": "^4.0.4"
+    "typescript": "^3.5.3",
+    "uglifyify": "^5.0.1"
   },
   "jest": {
     "transform": {
