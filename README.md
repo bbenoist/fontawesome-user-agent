@@ -4,8 +4,16 @@ A simple, yet extensible, TypeScript (and JavaScript) library which tries to det
 
 ## Installation
 
+### npm
+
 ```text
-npm install fontawesome-user-agent
+npm install --save fontawesome-user-agent
+```
+
+### yarn
+
+```text
+yarn add fontawesome-user-agent
 ```
 
 ## Usage
