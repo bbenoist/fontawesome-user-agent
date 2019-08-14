@@ -44,9 +44,12 @@ const icons = faUserAgent(userAgent, options => {
     options.prefix = "";
     options.icons.browser["Custom Browser"] = {
         name: "icon-name-without-prefix",
-        style: "fas-or-fab";
+        style: "fas-or-fab"
     }
-    options.icons.os.MacOS = "money-bill";
+    options.icons.os.MacOS = {
+        name: "money-bill",
+        style: "fas"
+    }
 });
 ```
 
