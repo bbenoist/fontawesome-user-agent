@@ -1,6 +1,6 @@
 {
   "name": "fontawesome-user-agent",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "fontawesome-user-agent",
   "main": "lib/cjs/index.js",
   "types": "lib/cjs/index.d.ts",
