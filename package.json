@@ -12,7 +12,8 @@
     "build:browser": "browserify lib/cjs/index.js --standalone MyLib -o dist/index.js",
     "build:browser:min": "browserify lib/cjs/index.js -g uglifyify --standalone MyLib -o dist/index.min.js",
     "test": "jest",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "dependencies": {
     "bowser": "^2.5.3"
@@ -21,6 +22,7 @@
     "@types/jest": "^24.0.17",
     "@types/node": "^12.7.1",
     "browserify": "^16.5.0",
+    "coveralls": "^3.0.6",
     "jest": "^24.8.0",
     "ts-jest": "^24.0.2",
     "ts-node": "^8.3.0",
@@ -31,9 +33,9 @@
     "transform": {
       ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "testRegex": "src/.*(/__tests__/.*|\\.(test|spec))\\.(jsx?|tsx?)$",
+    "testRegex": "src/.*(/__tests__/.*|\\.(test|spec))\\.(tsx?)$",
     "collectCoverageFrom": [
-      "src/**/*.{js,ts,tsx}"
+      "src/**/*.{ts,tsx}"
     ],
     "coverageDirectory": "coverage",
     "mapCoverage": true,
@@ -49,7 +51,16 @@
     "type": "git",
     "url": "https://github.com/bbenoist/fontawesome-user-agent.git"
   },
-  "keywords": ["font", "awesome", "fontawesome", "user", "agent", "user-agent", "bowser", "icon"],
+  "keywords": [
+    "font",
+    "awesome",
+    "fontawesome",
+    "user",
+    "agent",
+    "user-agent",
+    "bowser",
+    "icon"
+  ],
   "author": "_bbenoist_",
   "license": "MIT",
   "bugs": {
