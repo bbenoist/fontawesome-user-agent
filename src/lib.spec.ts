@@ -21,4 +21,12 @@ test("faUserAgent", () => {
       return options;
   });
   expect(result).toEqual(expected2);
+  const userAgent3 =
+    "Mozilla/5.0 (C64 4.4; Oldie; rv:41.0) Gecko/41.0 Demo/41.0";
+  const expected3 = {
+    browser: { name: "fa-question", style: "fas" },
+    os: { name: "fa-question", style: "fas" },
+    platform: { name: "fa-question", style: "fas" }
+  };
+  expect(faUserAgent(userAgent3)).toEqual(expected3);
 });
