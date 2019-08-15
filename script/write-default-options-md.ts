@@ -21,7 +21,7 @@ function codeRow(name: string, value: string) {
 
 function iconRow(name: string, icon: FaUserAgentIcon) {
   const className = `${DefaultOptions.prefix}${icon.name}`;
-  const iconHtml = `<i class="${icon.style} ${className}" />`;
+  const iconHtml = `![${icon.name}](icons/${icon.name}.svg)`;
   const prefixed = {
     name: className,
     style: icon.style
