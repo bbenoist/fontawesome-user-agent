@@ -21,9 +21,7 @@
         <p id="demo"></p>
         <script>
             var icons = FaUserAgent.faUserAgent(navigator.userAgent);
-            html = "<i class=\"" + icons.browser.style + " " + icons.browser.name + "\" />"
-                 + "<i class=\"" + icons.os.style + " " + icons.os.name + "\" />"
-                 + "<i class=\"" + icons.platform.style + " " + icons.platform.name + "\" />";
+            html = icons.browser.html + icons.os.html + icons.platform.html;
             document.getElementById("demo").innerHTML = html;
         </script>
     </body>

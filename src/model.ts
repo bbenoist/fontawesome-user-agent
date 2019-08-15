@@ -1,28 +1,32 @@
-export interface FaUserAgentIcon {
-  name: string,
-  style: string
+export interface FaUserAgentIconBase {
+  name: string;
+  style: string;
 }
 
-export interface FaUserAgentIconCategory {
-  [_: string]: FaUserAgentIcon;
+export interface FaUserAgentIcon extends FaUserAgentIconBase {
+  html: string;
 }
 
-export interface FaUserAgentIconCategories {
-  browser: FaUserAgentIconCategory;
-  os: FaUserAgentIconCategory;
-  platform: FaUserAgentIconCategory;
+export interface FaUserAgentIconCategory<T> {
+  [_: string]: T;
 }
 
-export interface FaUserAgentIcons {
-  browser: FaUserAgentIcon;
-  os: FaUserAgentIcon;
-  platform: FaUserAgentIcon;
+export interface FaUserAgentIconCategories<T> {
+  browser: FaUserAgentIconCategory<T>;
+  os: FaUserAgentIconCategory<T>;
+  platform: FaUserAgentIconCategory<T>;
+}
+
+export interface FaUserAgentIcons<T> {
+  browser: T;
+  os: T;
+  platform: T;
 }
 
 export interface FaUserAgentOptions {
   prefix: string;
-  icons: FaUserAgentIconCategories;
-  default: FaUserAgentIcons;
+  icons: FaUserAgentIconCategories<FaUserAgentIconBase>;
+  default: FaUserAgentIcons<FaUserAgentIconBase>;
 }
 
 export interface FaUserAgentOptionsBuilder {

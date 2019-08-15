@@ -31,11 +31,25 @@ import { faUserAgent } from "faUserAgent";
 const userAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36";
 
 const icons = faUserAgent(userAgent);
-// {
-//     browser: { name: "fa-chrome", style: "fab" },
-//     os: { name: "fa-apple", style: "fab" },
-//     platform: { name: "fa-desktop", style: "fas" }
-// }
+
+// Content of icons:
+{
+  browser: {
+    name: "fa-chrome",
+    style: "fab",
+    html: "<i class=\"fab fa-chrome\"/>"
+  },
+  os: {
+    name: "fa-apple",
+    style: "fab",
+    html: "<i class=\"fab fa-apple\"/>"
+  },
+  platform: {
+    name: "fa-desktop",
+    style: "fas",
+    html: "<i class=\"fas fa-desktop\"/>"
+  }
+}
 ```
 
 Simplified content of [`doc/demo.html`](https://github.com/bbenoist/fontawesome-user-agent/blob/master/doc/demo.html):
@@ -49,9 +63,7 @@ Simplified content of [`doc/demo.html`](https://github.com/bbenoist/fontawesome-
         <p id="demo"></p>
         <script>
             var icons = FaUserAgent.faUserAgent(navigator.userAgent);
-            html = "<i class=\"" + icons.browser.style + " " + icons.browser.name + "\" />"
-                 + "<i class=\"" + icons.os.style + " " + icons.os.name + "\" />"
-                 + "<i class=\"" + icons.platform.style + " " + icons.platform.name + "\" />";
+            html = icons.browser.html + icons.os.html + icons.platform.html;
             document.getElementById("demo").innerHTML = html;
         </script>
     </body>
@@ -65,13 +77,13 @@ If you need to customize some options, you can use the optional `options` argume
 ```js
 const icons = faUserAgent(userAgent, options => {
     options.prefix = "";
-    options.icons.browser.customBrowser = {
-        name: "icon-name-without-prefix",
-        style: "fas-or-fab"
-    }
     options.icons.os.macOS = {
         name: "money-bill",
         style: "fas"
+    }
+    options.default.os = {
+        name: "skull-crossbones",
+        style: "solid"
     }
 });
 ```
@@ -83,14 +95,14 @@ Available options:
 Name | Type | Description
 --- | --- | ---
 `prefix` | `string` | Icon name prefix (e.g. `fa-`).
-`icons.browser.<name>` | `FaUserAgentIcon` | Icon for browser with name `<name>`.
-`icons.os.<name>` | `FaUserAgentIcon` | Icon for OS with name `<name>`.
-`icons.platform.<name>` | `FaUserAgentIcon` | Icon for platform with name `<name>`.
-`default.browser` | `FaUserAgentIcon` | Default browser icon to use when not found in icon set.
-`default.os` | `FaUserAgentIcon` | Default OS icon to use when not found in icon set.
-`default.platform` | `FaUserAgentIcon` | Default platform icon to use when not found in icon set.
+`icons.browser.<name>` | `FaUserAgentIconBase` | Icon for browser with name `<name>`.
+`icons.os.<name>` | `FaUserAgentIconBase` | Icon for OS with name `<name>`.
+`icons.platform.<name>` | `FaUserAgentIconBase` | Icon for platform with name `<name>`.
+`default.browser` | `FaUserAgentIconBase` | Default browser icon to use when not found in icon set.
+`default.os` | `FaUserAgentIconBase` | Default OS icon to use when not found in icon set.
+`default.platform` | `FaUserAgentIconBase` | Default platform icon to use when not found in icon set.
 
-### FaUserAgentIcon
+### FaUserAgentIconBase
 
 Name | Type | Description
 --- | --- | ---
