@@ -1,6 +1,6 @@
 {
   "name": "fontawesome-user-agent",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Get browser, os and platform Font Awesome icons from user-agent string.",
   "main": "lib/cjs/index.js",
   "types": "lib/cjs/index.d.ts",
