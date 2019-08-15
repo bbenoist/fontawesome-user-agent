@@ -1,2 +1,10 @@
+*.spec.js
+*.spec.js.map
+*.spec.ts
+*.spec.d.ts
 *.tgz
+.travis.yml
+.vscode
+coverage
 doc
+script
