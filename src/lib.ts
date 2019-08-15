@@ -9,8 +9,10 @@ function getBaseIcon(
   options: FaUserAgentOptions
 ): FaUserAgentIcon {
   const cat = options.icons[category];
-  if (!!name && Object.keys(cat).some(k => k === name)) {
-    return cat[name];
+  const found =
+    name && Object.keys(cat).find(k => k.replace(" ", "").toLowerCase() === name.toLowerCase());
+  if (found) {
+    return cat[found];
   }
   return options.default[category];
 }

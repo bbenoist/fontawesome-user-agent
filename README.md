@@ -38,6 +38,26 @@ const icons = faUserAgent(userAgent);
 // }
 ```
 
+Simplified content of [`doc/demo.html`](https://github.com/bbenoist/fontawesome-user-agent/blob/master/doc/demo.html):
+
+```html
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+    </head>
+    <body>
+        <p id="demo"></p>
+        <script>
+            var icons = FaUserAgent.faUserAgent(navigator.userAgent);
+            html = "<i class=\"" + icons.browser.style + " " + icons.browser.name + "\" />"
+                 + "<i class=\"" + icons.os.style + " " + icons.os.name + "\" />"
+                 + "<i class=\"" + icons.platform.style + " " + icons.platform.name + "\" />";
+            document.getElementById("demo").innerHTML = html;
+        </script>
+    </body>
+</html>
+```
+
 ## Options
 
 If you need to customize some options, you can use the optional `options` argument:
@@ -45,11 +65,11 @@ If you need to customize some options, you can use the optional `options` argume
 ```js
 const icons = faUserAgent(userAgent, options => {
     options.prefix = "";
-    options.icons.browser["Custom Browser"] = {
+    options.icons.browser.customBrowser = {
         name: "icon-name-without-prefix",
         style: "fas-or-fab"
     }
-    options.icons.os.MacOS = {
+    options.icons.os.macOS = {
         name: "money-bill",
         style: "fas"
     }

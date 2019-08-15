@@ -35,12 +35,7 @@ function css(url: string) {
 
 const md = `# Default Options
 
-${[
-  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css",
-  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/brands.min.css"
-]
-  .map(css)
-  .join("\n")}
+${css("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css")}
 
 Name | Value | Icon
 --- | --- | ---

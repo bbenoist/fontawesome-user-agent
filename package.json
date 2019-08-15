@@ -6,11 +6,12 @@
   "types": "lib/cjs/index.d.ts",
   "scripts": {
     "prebuild": "rm -fr lib; rm -fr dist; mkdir lib; mkdir dist",
-    "build": "npm run build:cjs; npm run build:es6; npm run build:browser; npm run build:browser:min",
+    "build": "npm run build:cjs; npm run build:es6; npm run build:browser; npm run build:browser:min; npm run build:doc",
     "build:cjs": "tsc --module commonjs --outDir lib/cjs",
     "build:es6": "tsc --module es6 --outDir lib/es6",
-    "build:browser": "browserify lib/cjs/index.js --standalone MyLib -o dist/index.js",
-    "build:browser:min": "browserify lib/cjs/index.js -g uglifyify --standalone MyLib -o dist/index.min.js",
+    "build:browser": "browserify lib/cjs/index.js --standalone FaUserAgent -o dist/index.js",
+    "build:browser:min": "browserify lib/cjs/index.js -g uglifyify --standalone FaUserAgent -o dist/index.min.js",
+    "build:doc": "ts-node script/write-default-options-md.ts",
     "test": "jest",
     "coverage": "jest --coverage",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
@@ -31,14 +32,13 @@
   },
   "jest": {
     "transform": {
-      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+      ".(ts|tsx)": "ts-jest"
     },
     "testRegex": "src/.*(/__tests__/.*|\\.(test|spec))\\.(tsx?)$",
     "collectCoverageFrom": [
       "src/**/*.{ts,tsx}"
     ],
     "coverageDirectory": "coverage",
-    "mapCoverage": true,
     "moduleFileExtensions": [
       "ts",
       "tsx",
