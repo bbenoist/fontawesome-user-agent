@@ -35,17 +35,17 @@ const icons = faUserAgent(userAgent);
 // Content of icons:
 {
   browser: {
-    name: "fa-chrome",
+    name: "chrome",
     style: "fab",
     html: "<i class=\"fab fa-chrome\"/>"
   },
   os: {
-    name: "fa-apple",
+    name: "apple",
     style: "fab",
     html: "<i class=\"fab fa-apple\"/>"
   },
   platform: {
-    name: "fa-desktop",
+    name: "desktop",
     style: "fas",
     html: "<i class=\"fas fa-desktop\"/>"
   }

@@ -45,7 +45,7 @@ function getIcon(
 ): FaUserAgentIcon {
   const icon = getBaseIcon(category, name, options);
   return {
-    name: getPrefixedName(icon, options),
+    name: icon.name,
     style: icon.style,
     html: getIconHtml(icon, options)
   };
