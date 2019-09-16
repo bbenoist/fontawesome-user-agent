@@ -5,13 +5,13 @@ test("faUserAgent", () => {
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36";
   const expected = {
     browser: {
-      name: "fa-chrome",
+      name: "chrome",
       style: "fab",
       html: '<i class="fab fa-chrome"/>'
     },
-    os: { name: "fa-apple", style: "fab", html: '<i class="fab fa-apple"/>' },
+    os: { name: "apple", style: "fab", html: '<i class="fab fa-apple"/>' },
     platform: {
-      name: "fa-desktop",
+      name: "desktop",
       style: "fas",
       html: '<i class="fas fa-desktop"/>'
     }
@@ -21,17 +21,17 @@ test("faUserAgent", () => {
     "Mozilla/5.0 (Android 4.4; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0";
   const expected2 = {
     browser: {
-      name: "fa-firefox",
+      name: "firefox",
       style: "fab",
       html: '<i class="fab fa-firefox"/>'
     },
     os: {
-      name: "fa-android-custom",
+      name: "android-custom",
       style: "fab",
       html: '<i class="fab fa-android-custom"/>'
     },
     platform: {
-      name: "fa-mobile-alt",
+      name: "mobile-alt",
       style: "fas",
       html: '<i class="fas fa-mobile-alt"/>'
     }
@@ -45,17 +45,17 @@ test("faUserAgent", () => {
     "Mozilla/5.0 (C64 4.4; Oldie; rv:41.0) Gecko/41.0 Demo/41.0";
   const expected3 = {
     browser: {
-      name: "fa-question",
+      name: "question",
       style: "fas",
       html: '<i class="fas fa-question"/>'
     },
     os: {
-      name: "fa-question",
+      name: "question",
       style: "fas",
       html: '<i class="fas fa-question"/>'
     },
     platform: {
-      name: "fa-question",
+      name: "question",
       style: "fas",
       html: '<i class="fas fa-question"/>'
     }
