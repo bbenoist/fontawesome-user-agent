@@ -17,7 +17,7 @@
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "dependencies": {
-    "bowser": "^2.5.3"
+    "bowser": "^2.9.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.17",
