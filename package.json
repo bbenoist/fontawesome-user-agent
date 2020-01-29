@@ -20,7 +20,7 @@
     "bowser": "^2.5.3"
   },
   "devDependencies": {
-    "@types/jest": "^24.0.17",
+    "@types/jest": "^25.1.1",
     "@types/node": "^12.7.1",
     "browserify": "^16.5.0",
     "coveralls": "^3.0.6",
